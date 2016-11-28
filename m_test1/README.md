@@ -9,3 +9,4 @@ makfile使用的几点说明
     可用ifeq...else...endif函数判断变量的值，并用gcc 的-DXXX选项控制文件的编译。源文件中用#if defined()  #endif来控制编译。
 3. 函数
     makefile 用define...endef声明函数，用$(call name, param1, param2)来调用函数。其中name也可以为定义的变量字符串。
+	
