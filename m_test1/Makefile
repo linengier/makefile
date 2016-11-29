@@ -19,13 +19,19 @@ endef
 
 
 #can't assign value to variable in makefile cmd, you should passs to gcc directly
+#ifeq 判断相等，只能嵌套使用,在else语句中再判断
+
 $(TARGETS):test.c
-ifeq ("$(TEST_FLAGS)", "test")
+ifeq ("$(TEST_FLAGS)", "000")
 	$(call func, "$(KEY)")
 	$(call func, "$(key)")
-	$(CC) $(CFLAGS) -DADD_FLAGS $^ -o $@
+	$(CC) $(CFLAGS) -DADD_FLAGS1 $^ -o $@
+else
+ifeq ("$(TEST_FLAGS)", "111")
+	$(CC) $(CFLAGS) -DADD_FLAGS2 $^ -o $@
 else
 	$(CC) $(CFLAGS)  $^ -o $@
+endif
 endif
 clean:
 	-$(RM) -f *.o

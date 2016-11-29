@@ -1,1 +1,1 @@
-# makefile
+这是对Makefile有关常用的用法的总结 1. 通过make name=xxx命令传递变量到makefile文件并通过ifeq函数控制编译过程 通过-DXXX将宏定义传递给.c文件,并使用了define定义函数

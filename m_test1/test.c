@@ -9,8 +9,12 @@
 
 int main()
 {
-#if defined(ADD_FLAGS)
-    printf("makefile make name=xxx test\r\n");
+#if defined(ADD_FLAGS1)
+    printf("makefile make name=xxx test 11111\r\n");
+#endif
+
+#if defined(ADD_FLAGS2)
+    printf("makefile make name=xxx test 22222\r\n");
 #endif
 
 #if defined(MY_FLAGS)
