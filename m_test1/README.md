@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 makfile使用的几点说明
 1.变量
     makefile严格的区分，变量的大小写。
